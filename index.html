@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Secure Image Cryptographic System</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+</head>
+<body>
+
+ <h1>Secure Image Cryptographic System</h1>
+
+<!-- Toggle Buttons -->
+<div class="toggle-buttons">
+  <button id="showEncryptBtn">Encryption</button>
+  <button id="showDecryptBtn">Decryption</button>
+</div>
+
+<!-- Encrypt Section -->
+<div id="encryptSection">
+  <form id="encryptForm">
+    <input type="file" id="fileInput" accept="image/*" required />
+    <input type="text" id="encryptPassword" placeholder="Enter password" required />
+    <button type="submit">Encrypt & Download</button>
+  </form>
+</div>
+
+<hr />
+
+<!-- Decrypt Section -->
+<div id="decryptSection" style="display: none;">
+  <div class="image-container">
+    <img id="protectedImage" class="blurred" width="300" />
+  </div>
+  <input type="file" id="encryptedFileInput" accept=".txt" />
+  <button id="unlockButton" class="unlockButton">Unlock Image</button>
+</div>
+
+  <!-- Scripts -->
+  <script src="encrypt.js"></script>
+  <script src="view.js"></script>
+
+</body>
+</html>

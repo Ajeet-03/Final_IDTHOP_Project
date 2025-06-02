@@ -1,0 +1,150 @@
+/* General Body Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  padding: 30px;
+  perspective: 1000px;
+}
+
+/* Headings */
+h1 {
+  color: #fff;
+  text-shadow: 2px 2px 10px #000;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  animation: fadeInDown 1s ease-out;
+}
+
+/* Input, Textarea, and Button Styling */
+input, textarea, button {
+  width: 80%;
+  padding: 12px;
+  margin: 15px 0;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  font-size: 1rem;
+}
+
+input:focus, textarea:focus {
+  border-color: #4CAF50;
+  outline: none;
+  box-shadow: 0 0 12px #4CAF50;
+}
+
+/* Button Styling */
+button {
+  cursor: pointer;
+  background: linear-gradient(145deg, #4CAF50, #388E3C);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 0 6px 15px rgba(0, 255, 128, 0.3);
+  transform: perspective(500px) translateZ(0);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05) rotateX(5deg);
+  box-shadow: 0 10px 20px rgba(0, 255, 128, 0.6);
+}
+
+/* Image Container with 3D Effect */
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  perspective: 800px;
+  animation: floatUp 1.5s ease-out forwards;
+}
+
+/* Blurred image with 3D frame */
+.blurred {
+  filter: blur(15px);
+  transition: filter 0.5s ease, transform 0.8s ease;
+  max-width: 80%;
+  border-radius: 15px;
+  border: 2px solid #888;
+  transform: rotateY(15deg) rotateX(10deg);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Clear blur on unlock */
+.clear {
+  filter: blur(0);
+  transform: rotateY(0deg) rotateX(0deg);
+}
+
+/* Button Specific ID Style */
+#unlockButton {
+  background: linear-gradient(145deg, #00c6ff, #0072ff);
+  color: #fff;
+  padding: 12px 25px;
+  box-shadow: 0 6px 15px rgba(0, 183, 255, 0.4);
+}
+
+#unlockButton:hover {
+  transform: scale(1.08) rotateY(8deg);
+  box-shadow: 0 12px 25px rgba(0, 183, 255, 0.6);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.toggle-buttons {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.toggle-buttons button {
+  cursor: pointer;
+  background: linear-gradient(145deg, #0a0a0a, #202020);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  margin: 0 10px;
+  transition: 0.3s ease;
+}
+
+.toggle-buttons button:hover {
+  transform: scale(1.05);
+}
+
+.toggle-buttons {
+  display: flex;
+  justify-content: center; /* or space-between / flex-start / flex-end as needed */
+  gap: 20px; /* adds spacing between buttons */
+  margin: 20px 0; /* optional spacing above and below */
+}
+
+.toggle-buttons button {
+  flex: 1;
+  max-width: 200px; /* optional, to limit button size */
+}
